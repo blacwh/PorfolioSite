@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { DiFirebase, DiJavascript, DiJqueryUiLogo, DiReact, DiZend } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -13,12 +13,12 @@ const Technologies = () =>  (
     </SectionText>
     <List>
       <ListItem>
-        <DiReact size='3rem'/>
+        <DiJavascript size='3rem'/>
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
             Experience with <br />
-            React.js
+            Vanilla JavaScript
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -28,17 +28,17 @@ const Technologies = () =>  (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
             Experience with <br />
-            Node.js and Databases
+            Node.js, Flask, Databases
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiZend size='3rem'/>
+        <DiJqueryUiLogo size='3rem'/>
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
             Experience with <br />
-            like Figma
+            like jQueryUI
           </ListParagraph>
         </ListContainer>
       </ListItem>
