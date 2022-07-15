@@ -10,30 +10,30 @@ const Projects = () => (
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-      {projects.map(({ id, image, title, description, tags, source, visit }) => (
-        <div>
-          <BlogCard key={id}>
-            <Img src={image} />
+      {projects.map((p, i) => {
+        return (
+          <BlogCard key={i}>
+          <Img src={p.image} />
             <TitleContent>
-              <HeaderThree title>{title}</HeaderThree>
+              <HeaderThree title>{p.title}</HeaderThree>
               <Hr />
             </TitleContent>
-            <CardInfo>{description}</CardInfo>
+            <CardInfo className="card-info">{p.description}</CardInfo>
             <div>
               <TitleContent>Stack</TitleContent>
               <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
+                {p.tags.map((t, i) => {
+                  return <Tag key={i}>{t}</Tag>;
+                })}
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={visit}>Code</ExternalLinks>
-              <ExternalLinks href={source}>Source</ExternalLinks>
+              <ExternalLinks href={p.visit}>Code</ExternalLinks>
+              <ExternalLinks href={p.source}>Source</ExternalLinks>
             </UtilityList>
           </BlogCard>
-        </div>
-      ))}
+        );
+      })}
     </GridContainer>
   </Section>
 );
